@@ -8,10 +8,10 @@ class CashRegister
   end
   def add_item(title, price, quanity = 1)
     self.total += price * quanity
+    quanity.times do
     @items << title
+    end
     self.last_transaction = price * quanity
-
-
   end
   def apply_discount
     if self.discount == 0
